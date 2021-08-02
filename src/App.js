@@ -9,8 +9,12 @@ import {
 import Home from './pages/Home';
 import Topics from './pages/Topics';
 import People from './pages/People';
+import { createBrowserHistory } from "history";
+import analytics from '@segment/analytics.js-core';
+
 
 function App() {
+
   return (
     <div className="App">
       <div>
@@ -18,24 +22,24 @@ function App() {
         <nav>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/segment-test-app/">Home</Link>
             </li>
             <li>
-              <Link to="/people">People</Link>
+              <Link to="/segment-test-app/people">People</Link>
             </li>
             <li>
-              <Link to="/topics">Topics</Link>
+              <Link to="/segment-test-app/topics">Topics</Link>
             </li>
           </ul>
         </nav>
         <Switch>
-          <Route path="/people">
-            <People />
+          <Route path="/segment-test-app/people">
+            <People analytics={analytics}/>
           </Route>
-          <Route path="/topics">
+          <Route path="/segment-test-app/topics">
             <Topics />
           </Route>
-          <Route path="/">
+          <Route path="/segment-test-app/">
             <Home />
           </Route>
         </Switch>

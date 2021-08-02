@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import logo from '../logo.svg';
 
+
 function Home() {
+
+
     return (
         <div>
             <h1>Welcome to the Home page</h1>
@@ -10,6 +13,7 @@ function Home() {
                 <p>
                 Segment Test App
                 </p>
+                <p> ooga </p>
             </header>
         </div>
     )
